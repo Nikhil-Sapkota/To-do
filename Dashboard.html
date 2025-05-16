@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <main> 
+        <!-- Sidebar (Aside) starts here -->
+        <aside>
+            <!-- Upper Menu (User and Main Navigation Icons) -->
+            <div class="upper-menu">
+                <span>
+                    <!-- User Profile Image -->
+                    <img src="PNG/465700649_3399267570381272_8733616803354442109_n.jpg" alt="00" id="User-Image">
+                </span>
+                <span>
+                    <!-- Dashboard Icon -->
+                    <img src="SVG/Dashboard.svg" alt="OO" class="Image1">
+                </span>
+                <span>
+                    <!-- Tasks Icon -->
+                    <img src="SVG/tasks.svg" alt="OO" class="Image2">
+                </span>
+                <span>
+                    <!-- Calendar Icon -->
+                    <img src="SVG/calendar.svg" alt="OO" class="Image3">
+                </span>
+                <span>
+                    <!-- Projects Icon -->
+                    <img src="SVG/Projects.svg" alt="OO" class="Image4">
+                </span>
+            </div>
+            <!-- Lower Menu (Notifications and Settings) -->
+            <div class="lower-menu">
+                <span>
+                    <!-- Notification Bell Icon -->
+                    <img src="SVG/Bell.svg" alt="OO" class="Image5">
+                </span>
+                <span id="Restart-Button">
+                    <!-- Restart Icon -->
+                    <img src="SVG/Restart.svg" alt="OO" class="Image6">
+                </span>
+                <span>
+                    <!-- Settings Icon -->
+                    <img src="SVG/Setting.svg" alt="OO" class="Image7">
+                </span>
+            </div>
+        </aside>
+        <!-- Sidebar (Aside) ends here -->
+
+        <!-- Hamburger Menu Icon for Mobile -->
+        <div class="HamMenu">
+            <span>
+                <img src="SVG/HamMenu.svg" alt="">
+            </span>
+        </div>
+
+        <!-- Main Menu starts here -->
+        <div class="Menu">
+            <!-- Date Sections (Today & Next 7 Days) -->
+            <div class="Dates">
+                <div class="Today">
+                    <div class="Icon">
+                        <img src="SVG/calendar.svg" alt="00">
+                    </div>
+                    <div class="Day">Today</div>
+                    <div class="RemainingTasks">
+                        <p>2</p>
+                    </div>
+                </div>
+                <div class="Next7Days">
+                    <div class="Icon">
+                        <img src="SVG/calendar.svg" alt="00">
+                    </div>
+                    <div class="Day">Next 7 Days</div>
+                    <div class="RemainingTasks">
+                        <p>2</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Menu Options Section -->
+            <div class="MoreMenuOptions">
+                <!-- List Section -->
+                <div class="List">
+                    <div class="ListTittle">
+                        <div class="Tittle">List</div>
+                        <div class="ListAdding">
+                            <!-- Add New List Icon -->
+                            <img src="SVG/Add.svg" alt="" class="Add">
+                        </div>
+                    </div>
+                    <div class="ListItems">
+                        <!-- List Items will be added dynamically -->
+                    </div>
+                    <div class="Add">
+                        <!-- Form to Add New List Name -->
+                        <form action="" class="form">
+                            <input type="text" name="ListName" id="ListName" placeholder="Enter Your List Name" class="ListName">
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Completed and Trash Section -->
+                <div class="CompletedandTrash">
+                    <div class="Completed">
+                        <div class="Icon">
+                            <img src="SVG/Tick.svg" alt="00">
+                        </div>
+                        <div class="Tittle">Completed</div>
+                    </div>
+                    <div class="Trash">
+                        <div class="Icon">
+                            <img src="SVG/Bin.svg" alt="00">
+                        </div>
+                        <div class="Tittle">Trash</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Menu ends here -->
+         <div class="DashboardContent">
+            <div class="Upper-Menu">
+                <div class="AddTasksOptions">
+                    <div class="CurrentDay"><p>Today</p></div>
+                    <div class="FiltersAndOptions">
+                        <div class="Filter"><img src="SVG/Filter.svg" alt="00"></div>
+                        <div class="Options"><img src="SVG/Dot Menu.svg" alt="00"></div>
+                    </div>
+                </div>
+                <div class="AddTasks">
+                    <input type="text" name="Task" id="TaskAdder" placeholder="Add Tasks To 'Today'">
+                </div>
+            </div>
+            <div class="Lower-Menu">
+                <div class="FilterOptions">
+                    <div class="schedule">
+                        <div class="DownArrow"><img src="SVG/DownArrow.svg " alt="00"></div>
+                        <div class="Tasks"><p>Tasks</p></div>
+                    </div>
+                    <div class="Status"><p>PostPone</p></div>
+                </div>
+                <div class="TasksLists"></div>
+                </div>
+            </div>
+            <div class="CalendarContent">comming soon</div>
+            <div class="TaskContent">comming soon</div>
+            <div class="ProjectsContent">comming soon</div>
+            <div class="BellContent">comming soon</div>
+            <div class="RestartContent">comming soon</div>
+            <div class="UserContent">comming soon</div>
+         </div>
+    </main>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,510 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Reset and Base Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Body Layout */
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    background: #333333;
+}
+
+/* Sidebar (Aside) */
+aside {
+    width: 4%;
+    height: 100vh;
+    background: #3A3B40;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Upper Menu Section */
+.upper-menu {
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    gap: 70px;
+    background: #3A3B40;
+}
+
+/* Lower Menu Section */
+.lower-menu {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    gap: 40px;
+    background: #3A3B40;
+}
+
+/* Styling for each span inside aside */
+aside span {
+    height: 25%;
+    width: 20%;
+    background: #3A3B40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling inside Sidebar */
+aside span img {
+    height: 20px;
+    width: 20px;
+    background: #3A3B40;
+}
+
+/* User Profile Image Rounded */
+#User-Image {
+    border-radius: 50%;
+}
+
+/* Hover effect on Sidebar icons */
+aside span img:hover {
+    transform: scale(1.1);
+    transition: ease-in 0.25s;
+    cursor: pointer;
+}
+
+/* Hide Hamburger Menu by Default */
+.HamMenu {
+    display: none;
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .HamMenu {
+        display: flex;
+    }
+    main {
+        height: 100vh;
+    }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 900px) {
+    aside span img {
+        height: 15px;
+        width: 15px;
+    }
+    main {
+        height: 100vh;
+    }
+    aside {
+        display: none;
+    }
+}
+
+/* Left Side Menu */
+.Menu {
+    width: 20%;
+    border-right: 1.2px solid #ffffff68;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Dates Section */
+.Dates {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1.2px solid #ffffff68;
+    height: 15%;
+}
+
+/* Styling for Today and Next 7 Days Text */
+.Dates div {
+    font-size: 12px;
+}
+
+/* Styling for Today and Next 7 Days Containers */
+.Today, .Next7Days {
+    height: 35%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    border: 0.015px solid #3A3B40;
+    border-radius: 5px;
+}
+
+/* Text color for Remaining Tasks */
+.RemainingTasks p {
+    color: #9099a2;
+    font-size: 12px;
+}
+
+/* Hover effect for Today */
+.Today:hover {
+    background: #3A3B40;
+}
+
+/* Hover effect for text inside Today */
+.Today:hover div {
+    color: #c0c3d0;
+}
+.Today:hover div p {
+    color: #c0c3d0;
+}
+
+/* Hover effect for Next 7 Days */
+.Next7Days:hover {
+    background: #3A3B40;
+}
+
+/* Hover effect for text inside Next 7 Days */
+.Next7Days:hover div { 
+    background: #3A3B40;
+    border-radius: 5px;
+    color: #c0c3d0;
+}
+.Next7Days:hover div p {
+    color: #cdcdcd;
+}
+
+/* Hover effect for calendar icons */
+.Today:hover img, .Next7Days:hover img {
+    transform: scale(1.1);
+    background: transparent;
+    transition: ease-in .25s;
+}
+
+/* Icon Container */
+.Icon {
+    width: 25%;
+    height: auto;
+    text-align: center;
+}
+
+/* Day Text */
+.Day {
+    height: auto;
+    width: 50%;
+}
+
+/* Remaining Tasks Counter */
+.RemainingTasks {
+    height: auto;
+    width: 25%;
+    text-align: center;
+}
+
+/* More Menu Options Section */
+.MoreMenuOptions {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* List Section */
+.List {
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ffffff68;
+}
+
+/* Completed and Trash Section */
+.CompletedandTrash {
+    height: 40%;
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Title and Add Button for List */
+.ListTittle {
+    height: 12.5%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 10%;
+    padding: 0 10px;
+}
+
+/* Title Text inside List */
+.ListTittle .Tittle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #cdcdcd;
+}
+
+/* Add Icon Styling */
+.ListTittle .ListAdding img {
+    height: 15px;
+    width: 15px;
+}
+
+/* Add Button Hover Cursor */
+.ListTittle .ListAdding {
+    cursor: pointer;
+    display: flex;
+}
+
+/* Hidden List Items */
+.ListItems {
+    display: none;
+    border: 1px solid #3A3B40;
+    height: 12%;
+    align-items: center;
+    width: 80%;
+    margin: 3% 10%;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+/* New List Name Input */
+.ListName {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    background: #3a3b4083;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    padding: 10px 30px;
+    outline: none;
+    display: none;
+}
+
+/* Input Text Color */
+input {
+    color: whitesmoke;
+}
+
+/* Hover effect for List Items */
+.ListItems:hover {
+    background: #3A3B40;
+    cursor: pointer;
+}
+
+/* Inside List Items */
+.ListItems .Icon {
+    width: 25%;
+    text-align: center;
+}
+.ListItems .Title {
+    width: 50%;
+    text-align: left;
+}
+.ListItems .DotMenu {
+    width: 25%;
+    text-align: center;
+}
+
+/* Icons inside List Items */
+.ListItems .Icons img {
+    height: 20px;
+    width: 20px;
+}
+
+/* Font Size inside List Items */
+.ListItems div {
+    font-size: 12px;
+}
+
+/* Images inside Completed and Trash */
+.CompletedandTrash img {
+    height: 20px;
+    width: 20px;
+}
+
+/* Font Size for Completed and Trash Text */
+.CompletedandTrash div {
+    font-size: 12px;
+}
+
+/* Completed and Trash Layout */
+.Completed, .Trash {
+    display: flex;
+    align-items: center;
+    height: 17.5%;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Hover Effect for Completed */
+.Completed:hover {
+    background: #3A3B40;
+    border-radius: 5px;
+}
+
+/* Hover Effect for Trash */
+.Trash:hover {
+    background: #3A3B40;
+}
+
+/* Hover Effect on Text inside Trash and Completed */
+.Trash:hover div, .Completed:hover div {
+    color: #c0c3d0;
+}
+
+/* Hover Effect on Icons inside Trash and Completed */
+.Trash:hover img, .Completed:hover img {
+    transform: scale(1.1);
+    transition: ease-in .25s;
+}
+.DashboardContent{
+    border-right: 1px solid #ffffff51;
+    width: 55%;
+    display: none;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.DashboardContent .Upper-Menu{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.DashboardContent .Lower-Menu{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.AddTasksOptions{
+    height: 35%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.FiltersAndOptions img{
+    height: 15px;
+    width: 15px;
+}
+.FiltersAndOptions{
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+.FiltersAndOptions .Filter img{
+    cursor: pointer;
+}
+.FiltersAndOptions .Options img{
+    cursor: pointer;
+}
+.AddTasks{
+    height: 45%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.AddTasks input{
+    height: 85%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #3a3b4083;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    border-radius: 7px;
+}
+.CurrentDay p{
+    font-weight: bold;
+    font-size: 15px;
+}
+.schedule{
+    display: flex;
+    width: 7%;
+    justify-content: space-around
+}
+.FilterOptions{
+    display: flex;
+    width: 90%;
+    margin: 15px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.Status p{
+    color: #00E5FF;
+    font-size: 12px;
+}
+.Tasks p{
+    font-size: 14px;
+}
+.DownArrow img{
+    height: 12px;
+    width: 12px;
+}
+.TaskListItem .checkbox{
+    width: 10%;
+}
+.TaskListItem .TaskName{
+    width: 50%;
+}
+.TaskListItem .TaskStatus{
+    width: 10%;
+    text-align: right;
+}
+.TaskListItem{
+    width: 80%;
+    height: 7%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #3A3B40;
+}
+.TasksLists{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+.TaskStatus p{
+    color: #00E5FF;
+    font-size: 10px;
+}
+.CalendarContent{
+    display: none;
+}
+.TaskContent, .CalendarContent, .DashboardContent, .ProjectsContent, .BellContent, .RestartContent, .UserContent{
+    display: none;
+}
